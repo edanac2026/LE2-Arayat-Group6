@@ -1,69 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Wordscapes </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <style>
-            body{
-                background-image: url(arayatbg.jpg);
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                width: auto;
-                background-position: center;
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <title>wordscapes</title>
+        <script>
+            var word = '';
+            function addToList(word){
+            document.getElementById("list").innerHTML += "<li class='list-group-item' onclick='showItem(event)'>" + word + "</li>";
             }
-            h1{
-                padding-top: 10px;
-                font-family: helvetica;
-                font-size: 50px;
-                padding-left: 25px;
-                color: white;
+            function A(){
+                var a = 'A';
+                word += a;
+                document.getElementById('word-here').value = word;
             }
-            input{
-                padding-top: 50px;
-                padding-bottom: 50px;
-                padding-left: 500px;
-                padding-right: 500px;
-                border-radius: 10px;
-                margin: auto;
-                display: block;
-                font-size: 50px;
-                text-align: center;
+            function C(){
+                var c = 'C';
+                word += c;
+                document.getElementById('word-here').value = word;
             }
-            ::placeholder {
-            color: gray;
-            font-size: 50px;
-            text-align: center;
+            function E(){
+                var e = 'E';
+                word += e;
+                document.getElementById('word-here').value = word;
             }
-            button{
-                padding-top: 15px;
-                padding-bottom: 15px;
-                padding-left: 40px;
-                padding-right: 40px;
-                border-radius: 10px;
-                margin: auto;
-                margin-top: 10px;
-                display: block;
+            function R(){
+                var r = 'R';
+                word += r;
+                document.getElementById('word-here').value = word;
             }
-            @media (min-width: 900px) {
-                .left, .main, .right {
-                    width: 100%;
-                }
+            function T(){
+                var t = 'T';
+                word += t;
+                document.getElementById('word-here').value = word;
             }
-        </style>
+            function Clear(){
+                word = "";
+                document.getElementById("word-here").value = word;
+            }
+            function Check(){
+                if(word == "ACE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ACT"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ARC"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ARE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ART"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ATE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CAR"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CAT"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "EAR"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "EAT"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "RAT"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "TAR"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "TEA"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ACER"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "ACRE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CARE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CART"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "RACE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "RATE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "TEAR"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CATER"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "CRATE"){
+                    addToList(word);
+                    Clear();
+            }
+                else if(word == "TRACE"){
+                    addToList(word);
+                    Clear();
+            }
+                else{
+                    alert("This word does not exist.");
+                    Clear();
+                } 
+            word = "";
+            document.getElementById("words").value = '';
+            }
+        </script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body class="container">
         <div class="row">
-            <h1> Wordscapes </h1>
+            <h1>WORDSCAPES</h1>
         </div>
-        <div class="row">
-            <input type="text" placeholder="Word">
+        <div class="row" id="word">
+            <input type="text" id="word-here" disabled>
+            <button type="button" class="btn btn-outline-success" onclick="Check()">Check</button>
+        </div>
+        <div class="row" id="letters">
+            <button type="button" class="btn btn-primary" onclick="A()">A</button>
+            <button type="button" class="btn btn-primary" onclick="C()">C</button>
+            <button type="button" class="btn btn-primary" onclick="E()">E</button>
+            <button type="button" class="btn btn-primary" onclick="R()">R</button>
+            <button type="button" class="btn btn-primary" onclick="T()">T</button>
+            <button type="button" class="btn btn-outline-danger" onclick="Clear()">Clear</button>
         </div>
         <br>
-        <div class="row">
-            <!-- btw put like "onclick="insert function for button" later since idk yung pangalan - carl" -->
-            <button class="btn btn-primary"> Submit </button>
+        <br>
+        <div id="word-list">
+            <ul id="list" class="list-group-item">
+            </ul>
         </div>
     </body>
 </html>
