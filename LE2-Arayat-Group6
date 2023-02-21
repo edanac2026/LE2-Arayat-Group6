@@ -134,6 +134,10 @@
                     addToList(word);
                     Clear();
             }
+                else if(word == "REACT"){
+                    addToList(word);
+                    Clear();
+            }
                 else{
                     alert("This word does not exist.");
                     Clear();
